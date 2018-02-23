@@ -1,0 +1,7 @@
+---
+- hosts: all
+  tasks:
+   - name: get the storage detials
+     command: pwd
+     register: myoutput
+   - debug: var=myoutput.stdout_lines
